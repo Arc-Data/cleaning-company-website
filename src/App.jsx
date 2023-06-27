@@ -1,11 +1,16 @@
+import { Route, Routes, Link, BrowserRouter } from "react-router-dom"
+import Home from "./pages/Home"
+import RootLayout from "./layouts/RootLayout"
 
 const App = () => {
-
   return (
-    <h1 className = "text-xl text-blue-600">
-      Hello world!      
-    </h1>
+    <BrowserRouter>
+      <RootLayout /> 
+      <Routes>
+        <Route path="/" element={<Home />}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
-export default App
+export default App;
