@@ -1,21 +1,22 @@
-import { Route, Routes, Link, BrowserRouter } from "react-router-dom"
+import { Route, Routes, Link, BrowserRouter, Outlet } from "react-router-dom"
 import Home from './pages/Home'
 import About from './pages/About'
-import Category from './pages/Category'
 import Service from './pages/Service'
 import Book from './pages/Book'
 import RootLayout from "./layouts/RootLayout"
+import Contact from "./pages/Contact"
 
 const App = () => {
   return (
     <BrowserRouter>
-      <RootLayout /> 
       <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/" element={<About />}/>
-        <Route path="/" element={<Category />}/>
-        <Route path="/" element={<Service />}/>
-        <Route path="/" element={<Book />}/>
+        <Route element={<RootLayout />}>
+          <Route path="/" element={<Home />}/>
+          <Route path="/service" element={<Service />}/>
+          <Route path="/about" element={<About />}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/book" element={<Book />}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   )

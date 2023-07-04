@@ -1,7 +1,7 @@
 const Service = () => {
     return (
         <div>  
-            Book Page!
+            Services Page
         </div>
     )
 }
