@@ -10,7 +10,8 @@ export default {
         'inter': ['inter', 'sans-serif']
       },
       colors: {
-        'primary': '#35aaff'
+        'primary': '#35aaff',
+        'accent': '#ff6233'
       }
     },
   },

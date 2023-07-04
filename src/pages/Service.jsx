@@ -1,7 +1,10 @@
+import Banner from "../components/Banner";
+import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
+
 const Service = () => {
     return (
         <div>  
-            Services Page
+            <Banner src={BannerImage}/>
         </div>
     )
 }
