@@ -1,7 +1,7 @@
 import Banner from "../components/Banner";
 import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
 
-const Home = () => {
+const Home = () => {  
     return (
         <div>
             <div className="relative">
@@ -14,7 +14,7 @@ const Home = () => {
                             
                             <p className="text-2xl">Highly Regarded Cleaning Services in Manila</p>
                         </div>
-                        <button className="inline-flex bg-white text-accent text-2xl py-3 px-6 rounded font-medium duration-100 hover:scale-105">Learn More</button>
+                        <button className="inline-flex bg-white text-accent text-2xl py-3 px-6 rounded font-medium duration-100 hover:scale-1">Learn More</button>
                     </div>
                 </div>
             </div>  
