@@ -2,8 +2,38 @@ import Banner from "../components/Banner";
 import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
 import AboutImage from "/images/CleaningServiceGroup.jpeg"
 import { Link } from "react-router-dom";
+import Card from "../components/Card";
+import StairCase from "/images/StairCase.jpeg"
 
 const Home = () => {  
+    const Cards = [
+        {
+            "title": "Post Construction Cleaning Services",
+            "src": "/images/Staircase.jpeg"
+        },
+        {
+            "title": "Residential Cleaning Services",
+            "src": "/images/Staircase.jpeg"
+        },
+        {
+            "title": "Residential Deep Cleaning Services",
+            "src": "/images/Staircase.jpeg"
+        },
+        {
+            "title": "Commercial Deep Cleaning Services",
+            "src": "/images/Staircase.jpeg"
+        },
+        {
+            "title": "House/Office Keeping",
+            "src": "/images/Staircase.jpeg"
+        },
+        {
+            "title": "Commerical Cleaning Services",
+            "src": "/images/Staircase.jpeg"
+        },
+
+    ];
+
     return (
         <div className="text-inter">
             <div className="relative">
@@ -19,8 +49,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <main className="grid place-items-center max-w-screen-xl mx-auto">
-                <div className = "grid grid-cols-2 place-items-center my-14 gap-12 p-3">
+            <main className="grid place-items-center">
+                <div className = "grid grid-cols-2 max-w-screen-xl mx-auto place-items-center my-14 gap-12 p-3">
                     <img src={AboutImage}/>
                     <div className="flex flex-col h-full justify-between">
                         <div className = "flex flex-col gap-4">
@@ -31,10 +61,16 @@ const Home = () => {
                         <Link to = "/about" className="text-right text-accent text-2xl">About the company</Link>
                     </div>
                 </div> 
-                <div>
-                    Services
+                <div className="bg-secondary w-full py-16 flex flex-col space-y-10">
+                    <p className="text-5xl text-center text-primary font-bold">Services</p>
+                    <div className="grid md:grid-cols-3 sm:grid-cols-2 p-10 gap-y-5 gap-x-20">
+                        {Cards.map((card, idx) => {
+                            return <Card key={idx} title={card.title} src={card.src} />
+                        })}
+                    </div>
                 </div> 
             </main>  
+            
         </div>
     )
 }
