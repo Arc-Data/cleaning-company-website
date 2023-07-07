@@ -4,7 +4,7 @@ const RootLayout = () => {
     return (
         <>
         <header className ="shadow-md sticky top-0 p-5 font-inter z-10 bg-white">
-            <div className="flex items-center content-end">
+            <div className="container mx-auto flex items-center content-end">
                 <img src="images/Logo-Transparent.png" width="130px" height="130px"/>
                 <nav className="ml-auto flex flex-col space-y-10">
                     <div className="info flex text-xs gap-2.5">
