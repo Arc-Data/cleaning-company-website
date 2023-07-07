@@ -29,7 +29,7 @@ const About = () => {
             <section className="p-32">
                 <div className="grid grid-cols-3 gap-8">
                     {AboutCards.map((card, idx) => {
-                        return <AboutCard key={idx} card={card} /> 
+                        return <AboutCard key={idx} card={card} inverted={idx === 1}/> 
                     })}
                 </div>
             </section>
