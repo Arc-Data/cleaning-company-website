@@ -7,6 +7,9 @@ const Contact = () => {
     return (
         <div>  
             <BannerOverlay src={BannerImage} title={"Contact"} subtitle={"Reach Out To Us!"}/>
+            <section className="p-32">
+                Hello 
+            </section>
             <Footer />
         </div>
     )

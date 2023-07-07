@@ -9,3 +9,7 @@
   'GRAD' 200,
   'opsz' 24
 }
+
+.about--card {
+  @apply border px-4 py-10 rounded-xl flex flex-col text-center space-y-8
+}
