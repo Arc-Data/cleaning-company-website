@@ -1,6 +1,4 @@
 const AboutCard = ({card, inverted}) => {
-	console.log(inverted)
-
 	const cardStyle = {
 		'backgroundColor': inverted ? '#ff6233' : '',
 		'color': inverted ? 'white' : 'gray' 
