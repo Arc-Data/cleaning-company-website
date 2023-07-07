@@ -1,11 +1,12 @@
 import Banner from "../components/Banner";
+import BannerOverlay from "../components/BannerOverlay";
 import Footer from "../components/Footer";
 import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
 
 const Contact = () => {
     return (
         <div>  
-            <Banner src={BannerImage}/>
+            <BannerOverlay src={BannerImage} title={"Contact"} subtitle={"Reach Out To Us!"}/>
             <Footer />
         </div>
     )
