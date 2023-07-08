@@ -5,8 +5,9 @@ const Footer = () => {
 			<img src="/images/CleaningServiceGroup4Back.jpeg" style={{"height":"364px"}} className="w-full object-cover brightness-50"/>
 			<div className="absolute inset-0 w-full h-full flex px-4 py-20">
 				<div className="container mx-auto w-full grid md:grid-cols-3 text-white">
-					<img src="/images/Logo-Transparent.png" alt="" className="w-2/3 h-auto" />
+					<img src="/images/Logo-Transparent.png" alt="" className="hidden md:block w-2/3 h-auto" />
 					<div className="flex flex-col space-y-4">
+						<p className="text-2xl font-bold">Sweeping Masters Cleaning Services Company</p>
 						<p className="text-2xl font-bold">Subscribe to our newsletter!</p>
 						<div>
 							<input type="email" id="email" className="bg-transparent border rounded border-white px-4 py-2 outline-none w-full focus:bg-white focus:text-black" placeholder="johndoe@gmail.com" />

@@ -68,7 +68,7 @@ const Home = () => {
                 </div> 
                 <div className="bg-secondary w-full py-16 flex flex-col space-y-10">
                     <p className="text-5xl text-center text-primary font-bold">Services</p>
-                    <div className="grid md:grid-cols-3 p-10 gap-y-5 gap-x-20">
+                    <div className="container mx-auto grid md:grid-cols-3 p-10 gap-y-5 gap-x-20">
                         {Cards.map((card, idx) => {
                             return <Card key={idx} title={card.title} src={card.src} description={card.description}/>
                         })}
