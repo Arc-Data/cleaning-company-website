@@ -1,5 +1,4 @@
 const Card = ({title, src, description}) => {
-	console.log(title, src);
 	return (
 		<div className="bg-white rounded-lg shadow flex-col" style={{"height": "436px"}} >
 			<img src={src} alt="Nice" className="object-cover h-3/5 w-full rounded-t-lg"/>

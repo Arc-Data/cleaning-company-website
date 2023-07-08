@@ -3,7 +3,7 @@ const Footer = () => {
 	return (
 		<footer className="relative" >
 			<img src="/images/CleaningServiceGroup4Back.jpeg" style={{"height":"364px"}} className="w-full object-cover brightness-50"/>
-			<div className="absolute inset-0 w-full h-full flex p-20">
+			<div className="absolute inset-0 w-full h-full flex sm:flex-col p-2 md:p-20">
 				<img src="/images/Logo.png" className="" />
 				<div className="flex flex-col text-white h-full ml-auto justify-center text-2x space-y-10">
 					<div className="flex space-x-8">
