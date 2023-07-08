@@ -13,27 +13,27 @@ const Cards = [
     },
     {
         "title": "Residential Cleaning Services",
-        "src": "/images/Staircase.jpeg",
+        "src": "/images/FloorMop.jpeg",
         "description": "Have you ever dreamt of coming home to your apartment and not ever thinking of your cleaning responsibilities? Well, this service is right up your alley! Our professionals will clean and handle your apartment, making it comfortable, dust and dirt-free!"
     },
     {
         "title": "Residential Deep Cleaning Services",
-        "src": "/images/Staircase.jpeg",
+        "src": "/images/SofaVacuum.jpeg",
         "description": "Sometimes, the nooks and crannies in our home are difficult to reach and clean, making dust gather in one place. Let our professionals handle all your hassles with our deep cleaning services! We can guarantee your satisfaction and can accommodate your personal requests."
     },
     {
         "title": "Commercial Deep Cleaning Services",
-        "src": "/images/Staircase.jpeg",
+        "src": "/images/RoomMirror.jpeg",
         "description": "General cleaning is usually not enough to remove the built-up dirt and dust. Our commercial deep-cleaning services will ease your cleaning responsibilities. With our professionals, we can easily remove the built-up dirt, dust, and unnecessary hazards in your establishments."
     },
     {
         "title": "House/Office Keeping",
-        "src": "/images/Staircase.jpeg",
+        "src": "/images/RoomCleaning.jpeg",
         "description": "Work will always get busy as it gets. Do you find yourself having no time to clean? Well, we have professionals who can do it for you! We offer one-time or regular office or housekeeping cleaning services that fit your needs! Rest assured that our services will make your office or home a comfortable and cozy atmosphere."
     },
     {
         "title": "Commerical Cleaning Services",
-        "src": "/images/Staircase.jpeg",
+        "src": "/images/Window.jpeg",
         "description": "Daily, customers and employees come and go in buildings and establishments. It always is messy right after a business week. Let our company's professionals handle all your cleaning needs! We offer a variety of services depending on your type of establishment or business. Book now!"
     },
 ];
@@ -69,7 +69,7 @@ const Home = () => {
                 </div> 
                 <div className="bg-secondary w-full py-16 flex flex-col space-y-10">
                     <p className="text-5xl text-center text-primary font-bold">Services</p>
-                    <div className="container mx-auto grid md:grid-cols-3 p-10 gap-y-5 gap-x-20">
+                    <div className="container mx-auto grid md:grid-cols-3 p-10 gap-10">
                         {Cards.map((card, idx) => {
                             return <Card key={idx} title={card.title} src={card.src} description={card.description}/>
                         })}
