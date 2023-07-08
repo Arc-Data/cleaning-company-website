@@ -15,5 +15,9 @@ html {
 }
 
 .about--card {
-  @apply border px-4 py-10 rounded-xl flex flex-col text-center space-y-8
+  @apply border px-4 py-10 rounded-xl flex flex-col text-center space-y-8;
+}
+
+.contact--form {
+  @apply border border-gray-500 outline-none focus:shadow focus:border-primary hover:border-primary text-xl p-3.5 rounded w-full sm:max-w-sm md:max-w-full; 
 }

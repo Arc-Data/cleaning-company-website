@@ -4,8 +4,6 @@ import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
 import Cards from "../data/cards";
 import Card from "../components/Card";
 
-console.log(Cards)
-
 const Service = () => {
     return (
         <div>  
