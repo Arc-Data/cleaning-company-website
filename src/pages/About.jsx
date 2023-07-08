@@ -22,20 +22,20 @@ const About = () => {
     return (
         <div className="text-inter">
             <BannerOverlay src={BannerImage} title={"About Us"} subtitle={"Why Choose Sweeping Masters"}/>
-            <section className="p-32">
-                <div className="grid grid-cols-3 gap-8">
+            <section className="p-6 md:p-32">
+                <div className="grid md:grid-cols-3 gap-8">
                     {AboutCards.map((card, idx) => {
                         return <AboutCard key={idx} card={card} inverted={idx === 1}/> 
                     })}
                 </div>
             </section>
-            <section className="p-32 bg-secondary">
-                <div className="text-white flex flex-col space-y-20">
+            <section className="p-6 md:p-32 bg-secondary">
+                <div className=" text-white flex flex-col space-y-10 md:space-y-20">
                     <div className="flex flex-col space-y-2">
                         <p className="uppercase font-semibold text-gray-500">About The Company</p>
-                        <p className="font-bold text-6xl">Gets the job done. Smiles Guaranteed.</p>
+                        <p className="font-bold text-4xl md:text-6xl">Gets the job done. Smiles Guaranteed.</p>
                     </div>
-                    <div className="grid md:grid-cols-3 gap-10">
+                    <div className="grid md:grid-cols-3 gap-10 p-3">
                         <img src="/images/CleaningServiceGroup2.jpeg" className="rounded-lg"/>
                         <div className="text-xl text-gray-300 text-justify leading-loose">Our team is ready to cater to your cleaning requirements, whether you need a one-time cleaning session, a regular weekly visit, or even an emergency call-out. We are experienced in both residential and commercial cleaning, serving homeowners and letting agents alike. Our cleaners are known for their flexibility and reliability, ensuring that we meet and surpass your expectations. Utilizing cutting-edge cleaning equipment, we guarantee a thorough and hygienic cleaning of your home with each visit. Our mission is to provide you with an exceptional cleaning experience that goes beyond your satisfaction.</div>
                         <div className="border-l border-gray-800  text-2xl font-bold p-5 leading-loose text-primary">
