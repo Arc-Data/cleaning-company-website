@@ -1,4 +1,3 @@
-import Banner from "../components/Banner";
 import BannerOverlay from "../components/BannerOverlay";
 import Footer from "../components/Footer";
 import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
