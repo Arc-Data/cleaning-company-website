@@ -13,7 +13,9 @@ const RootLayout = () => {
             <div className="container md:flex md:justify-between mx-auto px-4 py-2">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                        <img src="/images/Logo-Transparent.png" className="w-32 h-auto" alt="" />                      
+                        <Link to = "/">
+                            <img src="/images/Logo-Transparent.png" className="w-32 h-auto" alt="" />                      
+                        </Link>
                     </div>
                     <div className="flex items-center">
                         <button className="block md:hidden" onClick={handleClick}>
@@ -43,18 +45,18 @@ const RootLayout = () => {
                 <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:items-center md:mt-4`}>
                     <ul className="md:flex md:items-center md:space-x-4">
                         <li>
-                            <Link to = "/" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={setMenuOpen}>Home</Link>
+                            <Link to = "/" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Home</Link>
                         </li>
                         <li>
-                            <Link to = "/about" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={setMenuOpen}>About</Link>
+                            <Link to = "/about" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>About</Link>
                         </li>
                         <li>
-                            <Link to = "/services" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={setMenuOpen}>Services</Link>
+                            <Link to = "/services" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Services</Link>
                         </li>
                         <li>
-                            <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={setMenuOpen}>Contact</Link>
+                            <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Contact</Link>
                         </li>
-                        <Link to = "/book">
+                        <Link to = "/book" onClick={handleClick}>
                             <button className = "bg-primary text-white p-4 rounded uppercase hover:opacity-80">Book Now!</button>
                         </Link>
                     </ul>
