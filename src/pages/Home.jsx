@@ -4,10 +4,25 @@ import AboutImage from "/images/CleaningServiceGroup.jpeg"
 import { Link } from "react-router-dom";
 import Card from "../components/Card";
 import Footer from "../components/Footer";
-import Cards from "../data/cards";
+import { onSnapshot } from "firebase/firestore";
+import { servicesCollection } from "../firebase"
+import { useEffect, useState } from "react";
 
+const Cards = [];
 
 const Home = () => {  
+    const [services, setServices] = useState([]);
+
+    useEffect(() => {
+        const unsubscribe = onSnapshot(servicesCollection, snapshot => {
+            const servicesArr = snapshot.docs.map(doc => ({
+                ...doc.data(),
+            }))
+            setServices(servicesArr);
+        })
+        return unsubscribe;
+    }, [])
+
     return (
         <div className="text-inter">
             <div className="relative">
@@ -31,7 +46,7 @@ const Home = () => {
                     <div className="flex flex-col h-full justify-between">
                         <div className = "flex flex-col space-y-10">
                             <p className="text-5xl text-primary font-semibold">We care about our work.</p>
-                            <p className="text-xl">We at Sweeping Masters care about the well being of our clients and their homes, therefore we carefully tend to the requests and do even more. We are a company based in Marikina and offers services within Manila. We are dedicated in improving our crafts and into listening and appropriately responding the needs of our clients. </p>
+                            <p className="text-xl leading-loose">We at Sweeping Masters care about the well being of our clients and their homes, therefore we carefully tend to the requests and do even more. We are a company based in Marikina and offers services within Manila. We are dedicated in improving our crafts and into listening and appropriately responding the needs of our clients. </p>
                         </div>
                         <Link to = "/about" className="text-right text-accent text-2xl font-bold">About the company</Link>
                     </div>
@@ -39,9 +54,11 @@ const Home = () => {
                 <div className="bg-secondary w-full py-16 flex flex-col space-y-10">
                     <p className="text-5xl text-center text-primary font-bold">Services</p>
                     <div className="container mx-auto grid md:grid-cols-3 p-10 gap-10">
-                        {Cards.map((card, idx) => {
-                            return <Card key={idx} title={card.title} src={card.src} description={card.description}/>
-                        })}
+                        {services.map((card) => (
+                            <Link key={card.id} to={{pathname: `/services/${card.id}}`}}>
+                                <Card key={card.id} card={card}/>
+                            </Link>
+                        ))}
                     </div>
                 </div> 
             </main>  

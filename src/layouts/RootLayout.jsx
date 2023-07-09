@@ -56,7 +56,7 @@ const RootLayout = () => {
                         <li>
                             <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Contact</Link>
                         </li>
-                        <Link to = "/book" onClick={handleClick}>
+                        <Link to = "/contact" onClick={handleClick}>
                             <button className = "bg-primary text-white p-4 rounded uppercase hover:opacity-80">Book Now!</button>
                         </Link>
                     </ul>

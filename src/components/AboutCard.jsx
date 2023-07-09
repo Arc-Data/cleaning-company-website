@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const AboutCard = ({card, inverted}) => {
 	const cardStyle = {
 		'backgroundColor': inverted ? '#ff6233' : '',
