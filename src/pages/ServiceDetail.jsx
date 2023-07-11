@@ -1,7 +1,9 @@
 import { doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { db, servicesCollection, storage } from "../firebase";
+import { servicesCollection, storage } from "../firebase";
+import BannerOverlay from "../components/BannerOverlay";
+import { getDownloadURL, ref } from "firebase/storage";
 
 const ServiceDetail = () => {
   const { id } = useParams();
@@ -18,6 +20,9 @@ const ServiceDetail = () => {
 
         if (cardSnapshot.exists()) {
           setCard(cardSnapshot.data());
+          const imageRef = ref(storage, cardSnapshot.data().imageUrl);
+          const url = await getDownloadURL(imageRef);
+          setImageUrl(url);
         } else {
           console.log("Service does not exist");
         }
@@ -31,23 +36,6 @@ const ServiceDetail = () => {
     fetchCard();
   }, [id]);
 
-    useEffect(() => {
-        const fetchImage = async () => {
-            if (card && card.imageRef) {
-                try {
-                    const imageRef = storage.ref().child(card.imageRef);
-                    const imageUrl = await imageRef.getDownloadURL();
-                    setImageUrl(imageUrl);
-                    console.log(imageUrl);
-                } catch (error) {
-                    console.error('Error fetching image:', error);
-                }
-            }
-        };
-
-        fetchImage();
-    }, [card]);
-    
     if(loading) {
         return <div>Loading...</div>
     }
@@ -56,8 +44,14 @@ const ServiceDetail = () => {
         return <div>Service does not exist.</div>
     }
 
+
     return (
-        <div>{card.title}</div>    
+        <div>
+            <div className="container mx-auto rounded mt-4 p-4 border">
+                <BannerOverlay src={imageUrl} title={card.title} />
+            </div>
+
+        </div>    
     )
 }
 
