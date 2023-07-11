@@ -8,20 +8,19 @@ import { onSnapshot } from "firebase/firestore";
 import { servicesCollection } from "../firebase"
 import { useEffect, useState } from "react";
 
-const Cards = [];
-
 const Home = () => {  
     const [services, setServices] = useState([]);
-
+    
     useEffect(() => {
         const unsubscribe = onSnapshot(servicesCollection, snapshot => {
             const servicesArr = snapshot.docs.map(doc => ({
+                id: doc.id,
                 ...doc.data(),
             }))
             setServices(servicesArr);
         })
         return unsubscribe;
-    }, [])
+    })
 
     return (
         <div className="text-inter">
@@ -55,7 +54,7 @@ const Home = () => {
                     <p className="text-5xl text-center text-primary font-bold">Services</p>
                     <div className="container mx-auto grid md:grid-cols-3 p-10 gap-10">
                         {services.map((card) => (
-                            <Link key={card.id} to={{pathname: `/services/${card.id}}`}}>
+                            <Link key={card.id} to={{pathname: `/services/${card.id}`}}>
                                 <Card key={card.id} card={card}/>
                             </Link>
                         ))}
