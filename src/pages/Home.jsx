@@ -29,7 +29,7 @@ const Home = () => {
                 <div className="absolute inset-0 bg-black bg-opacity-70 text-white" >
                     <div className="container flex flex-col h-full w-full p-4 md:mx-auto space-y-10 justify-center items-start">
                         <div className="flex flex-col space-y-4">
-                            <p className="text-8xl text-primary font-extrabold">Expert Cleaning Solutions.</p>
+                            <p className="text-5xl md:text-8xl text-primary font-extrabold">Expert Cleaning Solutions.</p>
                             <p className="text-lg md:text-xl w-1/2 md:w-full ">Sweeping Masters. Highly Regarded Cleaning Services in Manila</p>
                         </div>
                         <Link to = "/about">
