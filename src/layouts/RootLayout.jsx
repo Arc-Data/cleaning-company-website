@@ -5,7 +5,9 @@ const RootLayout = () => {
     const [isMenuOpen, setMenuOpen] = useState(false);
     const handleClick = () => {
         setMenuOpen(open => !open);
+        window.scrollTo({ top: 0, behavior: 'smooth'});
     }
+
 
     return (
         <>
@@ -13,7 +15,7 @@ const RootLayout = () => {
             <div className="container md:flex md:justify-between mx-auto px-4 py-2">
                 <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                        <Link to = "/">
+                        <Link to = "/" onClick={handleClick}>
                             <img src="/images/Logo-Transparent.png" className="w-32 h-auto" alt="" />                      
                         </Link>
                     </div>
@@ -45,16 +47,16 @@ const RootLayout = () => {
                 <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:items-center md:mt-4`}>
                     <ul className="md:flex md:items-center md:space-x-4">
                         <li>
-                            <Link to = "/" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Home</Link>
+                            <Link to = "/" className=" hover:bg-gray-300 p-4 rounded-2xl block uppercase" onClick={handleClick}>Home</Link>
                         </li>
                         <li>
-                            <Link to = "/about" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>About</Link>
+                            <Link to = "/about" className=" hover:bg-gray-300 p-4 rounded-2xl block uppercase" onClick={handleClick}>About</Link>
                         </li>
                         <li>
-                            <Link to = "/services" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Services</Link>
+                            <Link to = "/services" className=" hover:bg-gray-300 p-4 rounded-2xl block uppercase" onClick={handleClick}>Services</Link>
                         </li>
                         <li>
-                            <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl block" onClick={handleClick}>Contact</Link>
+                            <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl block uppercase" onClick={handleClick}>Contact</Link>
                         </li>
                         <Link to = "/contact" onClick={handleClick}>
                             <button className = "bg-primary text-white p-4 rounded uppercase hover:opacity-80">Book Now!</button>
@@ -63,28 +65,6 @@ const RootLayout = () => {
                 </div>
             </div>
         </header>
-        {/* <div className="mx-auto flex items-center content-end md:justify-between">
-                        <img src="images/Logo-Transparent.png" className="w-32 h-auto"/>
-                        <nav className="flex flex-col md:space-y-10">
-                            <div className="hidden md:flex info text-xs justify-end space-x-5">
-                            <p>
-                            <i class="fa-solid fa-envelope"></i> sweepingmasters@gmail.com
-                            </p>
-                            <p>
-                            <i class="fa-solid fa-phone"></i> 63+ 920-275-0407
-                            </p>
-                            </div>
-                            <div className="flex gap-12 items-center uppercase font-semibold text-primary">
-                                <Link to = "/" className=" hover:bg-gray-300 p-4 rounded-2xl">Home</Link>
-                                <Link to = "/about" className=" hover:bg-gray-300 p-4 rounded-2xl">About</Link>
-                                <Link to = "/services" className=" hover:bg-gray-300 p-4 rounded-2xl">Services</Link>
-                                <Link to = "/contact" className=" hover:bg-gray-300 p-4 rounded-2xl">Contact</Link>
-                                <Link to = "/book">
-                                    <button className = "bg-primary text-white p-4 rounded uppercase hover:opacity-80">Book Now!</button>
-                                </Link>
-                            </div>
-                        </nav>
-                    </div> */}
         <Outlet />
         </>
     )
