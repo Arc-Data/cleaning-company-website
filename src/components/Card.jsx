@@ -21,7 +21,7 @@ const Card = ({ card }) => {
       <img src={imageUrl} alt="Nice" className="object-cover h-60 w-full rounded-t-lg" />
       <div className="px-5 py-10 space-y-8">
         <p className="text-primary text-2xl font-bold">{card.title}</p>
-        <p className="line-clamp-3">{card.description}</p>
+        <p className="line-clamp-3 text-gray-800">{card.description}</p>
       </div>
     </div>
   );
