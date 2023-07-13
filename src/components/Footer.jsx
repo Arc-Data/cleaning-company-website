@@ -44,7 +44,7 @@ const Footer = () => {
 				</div>
 				<div className="flex flex-col p-2 space-y-4 justify-between">
 					<div className="flex flex-col space-y-2">
-						<p className="sm:w-64 md:w-full text-justify">Subscribe to our newsletter to receive the latest updates</p>
+						<p className="text-justify">Subscribe to our newsletter to receive the latest updates</p>
 						<input type="email" name="email" placeholder = "Enter your email here" className="px-4 py-2.5 rounded text-black w-full"/>
 					</div>
 					<p>Copyright {new Date().getFullYear()}. All rights reserved. Sweeping Masters Co.</p>
