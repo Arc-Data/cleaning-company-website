@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { servicesCollection, storage } from "../firebase";
 import BannerOverlay from "../components/BannerOverlay";
 import { getDownloadURL, ref } from "firebase/storage";
+import Footer from "../components/Footer";
 
 const Rates = (rates) => {
     let arr = [];

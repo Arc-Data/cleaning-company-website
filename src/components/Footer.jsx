@@ -1,40 +1,59 @@
 
 const Footer = () => {
 	return (
-		<footer className="relative" >
-			<img src="/images/CleaningServiceGroup4Back.jpeg" style={{"height":"364px"}} className="w-full object-cover brightness-50"/>
-			<div className="absolute inset-0 w-full h-full flex px-4 py-20">
-				<div className="container mx-auto w-full grid md:grid-cols-3 text-white">
-					<img src="/images/Logo-Transparent.png" alt="" className="hidden md:block w-2/3 h-auto" />
-					<div className="flex flex-col space-y-4">
-						<p className="text-2xl font-bold">Sweeping Masters Cleaning Services Company</p>
-						<p className="text-2xl font-bold">Subscribe to our newsletter!</p>
-						<div>
-							<input type="email" id="email" className="bg-transparent border rounded border-white px-4 py-2 outline-none w-full focus:bg-white focus:text-black" placeholder="johndoe@gmail.com" />
-						</div>
+		<footer className="p-6 md:p-12 bg-accent w-full">
+			<div className="container grid md:grid-cols-3 mx-auto gap-10 text-white">
+				<div className="flex flex-col p-2 space-y-4">
+					<div className="space-y-2">
+						<p className="font-bold text-3xl">About Us</p>
+						<p>Sweeping Masters Cleaning Company is a Cleaning Services Company based in Marikina that is dedicated to making life easier and relaxing for everyone</p>
 					</div>
-					<div className="flex flex-col space-y-10 items-end">
-						<div className="flex space-x-10">
-							<i className="fa-brands fa-facebook text-4xl"></i>
-							<i className="fa-brands fa-twitter text-4xl"></i>
-							<i className="fa-brands fa-instagram text-4xl"></i>
+					<p className="font-bold text-3xl space-y-4">Follow Us On</p>
+					<div className="flex space-x-4">
+						<div className="flex space-x-4 items-center">
+							<i className="fa-brands fa-facebook text-3xl text-primary"></i>
+							<p className="">Facebook</p>
 						</div>
-						<div className="flex flex-col space-y-4 items-end">
-							<p className="flex space-x-4"><span>sweepingmasters@gmail.com</span><span className="material-symbols-outlined">mail</span></p>
-							<p className="flex space-x-4"><span>09202750407</span><span className="material-symbols-outlined">phone_in_talk</span></p>
+						<div className="flex space-x-4 items-center">
+							<i className="fa-brands fa-twitter text-3xl text-primary"></i>
+							<p className="">Twitter</p>
+						</div>
+						<div className="flex space-x-4 items-center">
+							<i className="fa-brands fa-instagram text-3xl text-primary"></i>
+							<p className="">Instagram</p>
 						</div>
 					</div>
 				</div>
-				{/* <div className="container mx-auto flex flex-col text-white h-full justify-center text-2x space-y-10">
-					<div className="flex space-x-8">
-						<p className="flex space-x-4"><span className="material-symbols-outlined">mail</span><span>sweepingmasters@gmail.com</span></p>
-						<p className="flex space-x-4"><span className="material-symbols-outlined">phone_in_talk</span><span>sweepingmasters@gmail.com</span></p>
+				<div className="flex flex-col p-2 space-y-4">
+					<p className="font-bold text-3xl md:text-center">Contact</p>
+					<div className="flex flex-col space-y-4">
+						<div className="flex space-x-4">
+							<i className="fa-solid fa-location-dot text-3xl text-primary m-0 p-0"></i>                         
+							<p>Rainbow Street, Hacienda Heights, Concepcion Dos, Marikina City</p>
+						</div>
+						<div className="flex space-x-4">
+							<i className="fa-solid fa-envelope text-3xl text-primary"></i>
+							<p className="">sweepingmasters@gmail.com</p>
+						</div>
+						<div className="flex space-x-4">
+							<i className="fa-solid fa-phone text-3xl text-primary"></i>
+							<p className="">09202750407</p>
+						</div>
+					</div>
+					
+				</div>
+				<div className="flex flex-col p-2 space-y-4 justify-between">
+					<div className="flex flex-col space-y-2">
+						<p className="sm:w-64 md:w-full text-justify">Subscribe to our newsletter to receive the latest updates</p>
+						<input type="email" name="email" placeholder = "Enter your email here" className="px-4 py-2.5 rounded text-black w-full"/>
 					</div>
 					<p>Copyright {new Date().getFullYear()}. All rights reserved. Sweeping Masters Co.</p>
-				</div> */}
+				</div>
 			</div>
 		</footer>
 	)
 }
+
+
 
 export default Footer;
