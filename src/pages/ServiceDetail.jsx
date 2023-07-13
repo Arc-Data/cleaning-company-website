@@ -6,10 +6,12 @@ import BannerOverlay from "../components/BannerOverlay";
 import { getDownloadURL, ref } from "firebase/storage";
 
 const Rates = (rates) => {
-    console.log(rates)
-    return rates.map(rate => (
-        <p>Hello</p>
-    ))
+    let arr = [];
+    for (let rate in rates) {
+        arr.push(`${rates[rate]} per ${rate} hours`)
+    }
+
+    return (arr.map((i, idx) => <p key={idx} className="text-xl">{i}</p>))
 }
 
 const ServiceDetail = () => {
@@ -61,11 +63,12 @@ const ServiceDetail = () => {
             </div>
             <div className="container mx-auto grid grid-cols-3 min-h-screen h-full">
                 <div className="text-xl p-12 leading-loose col-span-2">{card.description}</div>
-                <div className="flex flex-col p-12">
+                <div className="flex flex-col p-12 space-y-8">
                     <p className="text-3xl text-primary font-bold">Rates</p>
-                     {Rate(card.rates)}
+                     {Rates(card.rates)}
                 </div>
             </div>
+            <Footer />
         </div>    
     )
 };

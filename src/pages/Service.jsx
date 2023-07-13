@@ -1,11 +1,11 @@
 import BannerOverlay from "../components/BannerOverlay";
-import Footer from "../components/Footer";
 import BannerImage from "/images/CleaningServiceGroup4Back.jpeg";
 import Card from "../components/Card";
 import { onSnapshot } from "firebase/firestore";
 import { servicesCollection } from "../firebase";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const Service = () => {
     const [services, setServices] = useState([]);

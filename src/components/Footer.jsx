@@ -24,8 +24,6 @@ const Footer = () => {
 							<p className="flex space-x-4"><span>09202750407</span><span className="material-symbols-outlined">phone_in_talk</span></p>
 						</div>
 					</div>
-					{/* <div className="flex justify-end">
-					</div> */}
 				</div>
 				{/* <div className="container mx-auto flex flex-col text-white h-full justify-center text-2x space-y-10">
 					<div className="flex space-x-8">
