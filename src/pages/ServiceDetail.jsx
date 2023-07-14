@@ -25,7 +25,7 @@ const Review = ({review}) => {
         <div class="container mx-auto border-t py-8">
             <div class="flex items-center justify-between">
                 <p>{review.name}</p>
-                <div>
+                <div className="flex">
                     { stars.map((star, idx) => <Star key={idx} isFilled={idx < review.star}/>) }      
                 </div>         
             </div>
