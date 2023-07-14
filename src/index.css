@@ -19,5 +19,5 @@ html {
 }
 
 .contact--form {
-  @apply border border-gray-500 outline-none focus:shadow focus:border-primary hover:border-primary text-xl p-3.5 rounded w-full sm:max-w-sm md:max-w-full; 
+  @apply border border-gray-800 outline-none focus:shadow focus:border-primary hover:border-primary text-xl p-3.5 rounded w-full sm:max-w-sm md:max-w-full; 
 }
