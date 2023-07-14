@@ -24,9 +24,9 @@ useEffect(() => {
                     <p className="text-primary text-2xl font-bold">{card.title}</p>
                     <p className="line-clamp-3 text-gray-800">{card.description}</p>
                 </div>
-                <div className="border"></div>
-                <div>
-                    <button className="text-primary py-2.5 px-4 rounded border hover:border-primary">Read More</button>
+                <div className='mb-10'>
+                <button className="text-primary text-xl hover:underline">Read More</button>
+
                 </div>
             </div>
         </div>
