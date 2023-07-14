@@ -23,10 +23,7 @@ useEffect(() => {
                 <div className="py-10 space-y-8">
                     <p className="text-primary text-2xl font-bold">{card.title}</p>
                     <p className="line-clamp-3 text-gray-800">{card.description}</p>
-                </div>
-                <div className='mb-10'>
-                <button className="text-primary text-xl hover:underline">Read More</button>
-
+                    <button className="text-primary text-xl hover:underline">Read More</button>
                 </div>
             </div>
         </div>
