@@ -8,13 +8,10 @@ const Footer = () => {
 						<p className="font-bold text-3xl">About Us</p>
 						<p>Sweeping Masters Cleaning Company is a Cleaning Services Company based in Marikina that is dedicated to making life easier and relaxing for everyone</p>
 					</div>
-					<div className="flex justify-between">
-						<p className="font-bold text-3xl">Follow Us On</p>
-						<div className="space-x-4">
-							<i className="fa-brands fa-facebook text-3xl"></i>
-							<i className="fa-brands fa-twitter text-3xl"></i>
-							<i className="fa-brands fa-instagram text-3xl"></i>
-						</div>
+					<div className="flex space-x-4">
+						<i className="fa-brands fa-facebook text-3xl"></i>
+						<i className="fa-brands fa-twitter text-3xl"></i>
+						<i className="fa-brands fa-instagram text-3xl"></i>
 					</div>
 				</div>
 				<div className="flex flex-col p-2 space-y-4">
