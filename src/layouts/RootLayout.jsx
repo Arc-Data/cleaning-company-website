@@ -11,17 +11,14 @@ const RootLayout = () => {
         }
     }
 
-
     return (
         <>
         <header className ="shadow-md sticky top-0 font-inter z-10 bg-white">
-            <div className="container md:flex md:justify-between mx-auto px-4 py-2">
+            <div className="container md:flex md:justify-between mx-auto p-6">
                 <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                        <Link to = "/" onClick={() => handleClick(true)}>
-                            <img src="/images/Logo-Transparent.png" className="w-32 h-auto" alt="" />                      
-                        </Link>
-                    </div>
+                    <Link to = "/" onClick={() => handleClick(true)}>
+                        <img src="images/Horizontal.png" className="w-32 md:w-64 h-auto" alt="" />                      
+                    </Link>
                     <div className="flex items-center">
                         <button className="block md:hidden" onClick={() => handleClick(false)}>
                             <svg

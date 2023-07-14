@@ -43,15 +43,15 @@ const Contact = () => {
                             <p className="">Instagram</p>
                         </div>
                         <div className="flex space-x-4 items-center">
-                            <i class="fa-solid fa-location-dot text-3xl text-primary"></i>                         
+                            <i className="fa-solid fa-location-dot text-3xl text-primary"></i>                         
                             <p>Rainbow Street, Hacienda Heights, Concepcion Dos, Marikina City</p>
                         </div>
                         <div className="flex space-x-4 items-center">
-                            <i class="fa-solid fa-envelope text-3xl text-primary"></i>
+                            <i className="fa-solid fa-envelope text-3xl text-primary"></i>
                             <p className="">sweepingmasters@gmail.com</p>
                         </div>
                         <div className="flex space-x-4 items-center">
-                            <i class="fa-solid fa-phone text-3xl text-primary"></i>
+                            <i className="fa-solid fa-phone text-3xl text-primary"></i>
                             <p className="">09202750407</p>
                         </div>
                     </div>
