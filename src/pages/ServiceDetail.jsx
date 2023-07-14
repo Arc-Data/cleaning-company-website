@@ -89,7 +89,7 @@ const ServiceDetail = () => {
                 <BannerOverlay src={imageUrl} title={card.title} />
             </div>
             <div className="container mx-auto grid md:grid-cols-[800px_1fr] p-12 gap-12 auto-rows-2">
-                <div className="flex flex-col space-y-8 border-l p-12 shadow-md rounded bg-primary text-white order-none md:order-2">
+                <div className="flex flex-col space-y-8 border-l p-6 md:p-12 shadow-md rounded bg-primary text-white order-none md:order-2">
                     <p className="text-3xl font-bold">Rates</p>
                      {Rates(card.rates)}
                 </div>
