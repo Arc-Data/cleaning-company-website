@@ -23,10 +23,11 @@ const Review = ({review}) => {
 
     return (
         <div class="container mx-auto border-t py-8">
-            <div class="flex items-center">
-                {review.name} - {
-                    stars.map((star, idx) => <Star key={idx} isFilled={idx < review.star}/>)
-                }              
+            <div class="flex items-center content-between">
+                <p>{review.name}</p>
+                <div>
+                    { stars.map((star, idx) => <Star key={idx} isFilled={idx < review.star}/>) }      
+                </div>         
             </div>
             <p class="mt-5">{review.review}</p>
         </div> 
@@ -44,6 +45,12 @@ const Rates = (rates) => {
     }
 
     return (arr.map((i, idx) => <p key={idx} className="text-xl">{i}</p>));
+};
+
+const SQM = (sqm) => {
+    return (
+        <p className="text-xl">{sqm} per square meter.</p>
+    )
 };
 
 const ServiceDetail = () => {
@@ -91,7 +98,8 @@ const ServiceDetail = () => {
             <div className="container mx-auto grid md:grid-cols-[800px_1fr] p-12 gap-12 auto-rows-2">
                 <div className="flex flex-col space-y-8 border-l p-6 md:p-12 shadow-md rounded bg-primary text-white order-none md:order-2">
                     <p className="text-3xl font-bold">Rates</p>
-                     {Rates(card.rates)}
+                     {card.rates && Rates(card.rates)}
+                     {card.sqm && SQM(card.sqm)}
                 </div>
                 <div className="flex flex-col space-y-12 text-xl text-gray-800 sm:leading-loose md:leading-loose row-span-2">
                     <p>{card.description}</p>
